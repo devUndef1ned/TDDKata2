@@ -33,8 +33,15 @@ class StringCalculatorTests {
     }
 
     @Test
-    fun whenAdd_severalNumbersSeparatedByCommas_shouldReturnTheirSum() {
+    fun whenAdd_severalNumbersSeparatedByComma_shouldReturnTheirSum() {
         var arg = "5,4,3,2,1"
+
+        Assert.assertEquals(15, calculator.add(arg))
+    }
+
+    @Test
+    fun whenAdd_severalNumbersSeparatedByCommaAndNewLineSymbol_shouldReturnTheirSum() {
+        var arg = "5,4\n3\n2,1"
 
         Assert.assertEquals(15, calculator.add(arg))
     }
