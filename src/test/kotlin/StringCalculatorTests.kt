@@ -25,4 +25,11 @@ class StringCalculatorTests {
         Assert.assertEquals(4, calculator.add(arg))
     }
 
+    @Test
+    fun whenAdd_twoNumbersSeparatedByComma_shouldReturnTheirSum() {
+        var arg = "5,9"
+
+        Assert.assertEquals(14, calculator.add(arg))
+    }
+
 }
