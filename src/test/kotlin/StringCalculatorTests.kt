@@ -18,4 +18,11 @@ class StringCalculatorTests {
         Assert.assertEquals(0, calculator.add(arg))
     }
 
+    @Test
+    fun whenAdd_singleNumber_shouldReturnTheSameValue() {
+        var arg = "4"
+
+        Assert.assertEquals(4, calculator.add(arg))
+    }
+
 }

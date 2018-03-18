@@ -1,6 +1,9 @@
 class StringCalculator {
 
     fun add(numbers: String): Int {
-        return 0
+        if (numbers.isEmpty()) {
+            return 0
+        }
+        return numbers.toInt()
     }
 }
