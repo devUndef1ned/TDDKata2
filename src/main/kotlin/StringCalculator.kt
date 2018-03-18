@@ -7,9 +7,7 @@ class StringCalculator {
         if (numbers.isEmpty()) {
             return 0
         }
-        if (!numbers.contains(firstSeparator) && !numbers.contains(secondSeparator)) {
-            return numbers.toInt()
-        }
+
         return sumOfNumbers(numbers)
     }
 
