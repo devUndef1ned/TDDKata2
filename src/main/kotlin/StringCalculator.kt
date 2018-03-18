@@ -9,6 +9,10 @@ class StringCalculator {
         if (!numbers.contains(separator)) {
             return numbers.toInt()
         }
+        return summOfTwoNumbers(numbers)
+    }
+
+    private fun summOfTwoNumbers(numbers: String): Int {
         var separatorIndex = numbers.indexOf(separator)
         var first = numbers.substring(0, separatorIndex).toInt()
         var second = numbers.substring(separatorIndex + 1).toInt()
