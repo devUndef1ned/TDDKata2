@@ -9,14 +9,17 @@ class StringCalculator {
         if (!numbers.contains(separator)) {
             return numbers.toInt()
         }
-        return summOfTwoNumbers(numbers)
+        return sumOfNumbers(numbers)
     }
 
-    private fun summOfTwoNumbers(numbers: String): Int {
-        var separatorIndex = numbers.indexOf(separator)
-        var first = numbers.substring(0, separatorIndex).toInt()
-        var second = numbers.substring(separatorIndex + 1).toInt()
+    private fun sumOfNumbers(numbers: String): Int {
+        var numbersArray = numbers.split(separator)
+        var sum = 0
 
-        return first + second
+        for (number in numbersArray) {
+            sum += number.toInt()
+        }
+
+        return sum
     }
 }
